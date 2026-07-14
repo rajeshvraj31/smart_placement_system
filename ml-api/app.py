@@ -18,6 +18,10 @@ def clean_text(text):
     text = re.sub(r'[^a-zA-Z ]', ' ', text)
     return text
 
+@app.route("/")
+def home():
+    return "Smart Placement ML API is Running Successfully!"
+
 @app.route('/rank', methods=['POST'])
 def rank():
     if 'resume' not in request.files:
