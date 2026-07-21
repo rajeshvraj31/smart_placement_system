@@ -37,7 +37,7 @@ while($row = mysqli_fetch_assoc($res)){
             'resume' => new CURLFile(realpath($resume_path)),
             'job'    => $job_text
         ];
-        curl_setopt($ch, CURLOPT_URL,            "http://127.0.0.1:5000/rank");
+        curl_setopt($ch, CURLOPT_URL,            "https://smart-placement-api-iax1.onrender.com/rank");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POST,           true);
         curl_setopt($ch, CURLOPT_POSTFIELDS,     $data);
